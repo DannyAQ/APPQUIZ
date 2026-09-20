@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz Redes y telecomunicaciones</title>
+    <meta
+      name="description"
+      content="Quiz web moderno, elegante y responsive para universidad."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <div class="bg-orb orb-one"></div>
+      <div class="bg-orb orb-two"></div>
+
+      <main class="app-card">
+        <section id="welcomeScreen" class="screen active">
+          <div class="brand-pill">
+            <span class="brand-mark">AQ</span>
+            <span>7mo Semestre</span>
+          </div>
+
+          <div class="welcome-copy">
+            <p class="eyebrow">Evaluación de conocimientos</p>
+            <h1>Quiz Redes y telecomunicaciones</h1>
+            <p class="subtitle">
+              15 preguntas de opción múltiple, selecciona la respuesta correcta.      
+              
+            </p class="subtitle">
+            <p class="subtitle">
+              
+          Alerta: El sistema cuenta las salidas de la pagina para evitar uso de IA (inteligencia animal).</p class="subtitle">
+          </div>
+
+          <div class="name-form">
+            <label for="studentName">Tu nombre</label>
+            <input
+              id="studentName"
+              type="text"
+              placeholder="Escribe tu nombre completo"
+              autocomplete="off"
+            />
+            <p id="nameError" class="error-message" aria-live="polite"></p>
+            <button id="startBtn" class="primary-btn" type="button">
+              Comenzar quiz
+            </button>
+          </div>
+        </section>
+
+        <section id="quizScreen" class="screen">
+          <div class="quiz-header">
+            <span id="questionCounter" class="question-counter">Pregunta 1 de 15</span>
+            <div class="progress-track" aria-label="Progreso del quiz">
+              <div id="progressBar" class="progress-bar"></div>
+            </div>
+            <div id="exitCounter" class="exit-counter">Salidas de la página: 0</div>
+          </div>
+
+          <div class="question-panel">
+            <h2 id="questionText">Pregunta</h2>
+            <div id="optionsList" class="options-list"></div>
+          </div>
+
+          <div class="quiz-actions">
+            <button id="prevBtn" class="secondary-btn" type="button">Anterior</button>
+            <button id="nextBtn" class="primary-btn" type="button">Siguiente</button>
+          </div>
+        </section>
+
+        <section id="resultScreen" class="screen">
+          <div id="resultCard" class="result-card">
+            <div class="result-badge">QUIZ FINALIZADO</div>
+
+            <div class="result-grid">
+              <div class="result-item">
+                <span>Nombre</span>
+                <strong id="resultName">-</strong>
+              </div>
+              <div class="result-item">
+                <span>Correctas</span>
+                <strong id="resultCorrect">0 / 15</strong>
+              </div>
+              <div class="result-item">
+                <span>Incorrectas</span>
+                <strong id="resultIncorrect">0</strong>
+              </div>
+              <div class="result-item">
+                <span>Fecha</span>
+                <strong id="resultDate">-</strong>
+              </div>
+            </div>
+
+            <div class="score-block">
+              <div class="score-copy">
+                <span>Puntaje</span>
+                <strong id="resultScore">0.0 / 5.0</strong>
+              </div>
+              <span id="resultStatus" class="status-badge">NO APROBADO</span>
+            </div>
+
+            <div class="result-exit-box">
+              <span id="resultExitCounter">Salidas de la página: 0</span>
+            </div>
+          </div>
+
+          <div class="result-actions">
+            <button id="downloadPdfBtn" class="primary-btn" type="button">
+              Descargar PDF
+            </button>
+            <button id="downloadImageBtn" class="secondary-btn" type="button">
+              Descargar imagen
+            </button>
+            <button id="retryBtn" class="ghost-btn" type="button">Reintentar</button>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
