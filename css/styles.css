@@ -34,7 +34,6 @@ body {
     radial-gradient(circle at bottom right, rgba(139, 92, 246, 0.18), transparent 30%),
     var(--bg-dark);
   color: var(--text);
-  overflow-x: hidden;
 }
 
 button,
@@ -262,7 +261,6 @@ h1 {
   align-items: center;
   justify-content: center;
   max-width: 100%;
-  width: fit-content;
   padding: 8px 12px;
   border-radius: 12px;
   background: rgba(34, 211, 238, 0.08);
